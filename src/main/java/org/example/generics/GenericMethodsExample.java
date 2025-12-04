@@ -4,6 +4,8 @@ public class GenericMethodsExample
 {
     public static void main(String[] args)
     {
+        //String name = String.valueOf(1);
+
         String[] array1 = {"ashwin","akshita","ayush"};
         System.out.println(getGenericArrayFirstElement(array1));
         var val1 = getGenericArrayFirstElement(array1);
@@ -16,7 +18,7 @@ public class GenericMethodsExample
         Double[] array3 = {1.0,2.0,3.0};
         System.out.println(getGenericArrayFirstElement(array3));
 
-        System.out.println(getSum(10,6));
+        System.out.println(getSum(10,6.9));
 
     }
 
@@ -25,8 +27,11 @@ public class GenericMethodsExample
         return array[0];
     }*/
 
+    // here T is return type ( data type )
     public static <T> T getGenericArrayFirstElement(T[] array)
     {
+        System.out.println("array length "+array.length);
+        String value = String.valueOf(array[0]);
         return array[0];
     }
 
