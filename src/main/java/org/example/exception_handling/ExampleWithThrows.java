@@ -2,6 +2,13 @@ package org.example.exception_handling;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+/*
+    try block
+    catch block
+    finally
+    throw
+    throws
+ */
 
 public class ExampleWithThrows
 {
@@ -12,8 +19,10 @@ public class ExampleWithThrows
         {
             System.out.println("inside try");
             System.out.println("before read");
-            readFile();
+            //readFile();
+            callReadFile();
             System.out.println("after read ");
+
         }
         catch (Exception e)
         {
@@ -24,10 +33,20 @@ public class ExampleWithThrows
         System.out.println("isFileReadSuccess "+isFileReadSuccess);
     }
 
-    public static void readFile() throws FileNotFoundException {
+    public static void callReadFile() throws Exception {
+        System.out.println("inside callReadFile");
+        readFile();
+
+
+    }
+
+    public static void readFile() throws Exception {
 
         System.out.println("inside readFile");
-        FileReader  fileReader = new FileReader("abcd");
+        //FileReader  fileReader = new FileReader("abcd");
+
+        int[] array = new int[5];
+        System.out.println(array[10]);
     }
 
 }

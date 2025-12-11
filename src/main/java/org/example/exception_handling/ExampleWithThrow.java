@@ -11,6 +11,12 @@ public class ExampleWithThrow
             int result = divide(10, 0);
             System.out.println("result "+result);
         }
+        catch (ArithmeticException e)
+        {
+            isDivideSuccess = false;
+            System.out.println("at main method exception catch, exception message "+e.getMessage());
+            //e.printStackTrace();
+        }
         catch (Exception e)
         {
             isDivideSuccess = false;
