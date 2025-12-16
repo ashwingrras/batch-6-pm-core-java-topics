@@ -6,7 +6,8 @@ import java.util.Date;
 /*
    thread1 : New  -> .start()  -> Runnable ->  Terminated
 
-   thread1 : New  -> .start()  -> Runnable -> Thread.sleep() -> Timed_Waiting  Terminated
+   thread1 : New  -> .start()  -> Runnable -> Thread.sleep() at running thread -> Timed_Waiting when checking thread state ->  Terminated
+
 
 
 
@@ -14,6 +15,7 @@ import java.util.Date;
 
 public class MainClass1
 {
+    // java  run main  thread
     public static void main(String[] args)
     {
         // First way to create and run thread

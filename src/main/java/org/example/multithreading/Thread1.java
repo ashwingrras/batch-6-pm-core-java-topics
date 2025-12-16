@@ -29,7 +29,7 @@ public class Thread1 extends Thread {
             ///System.out.println("inside thread 1 name: "+names[i]);
         }
         try {
-            Thread.sleep(5000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
