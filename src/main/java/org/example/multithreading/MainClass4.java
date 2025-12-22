@@ -18,8 +18,10 @@ public class MainClass4
         Counter counter2 = new Counter();
         Thread1PrintNumber thread1 =  new Thread1PrintNumber(lock, counter1);
         thread1.setName("11111");
+        thread1.setPriority(10);
         Thread1PrintNumber thread2 = new Thread1PrintNumber(lock, counter1);
         thread2.setName("22222");
+        thread2.setPriority(5);
         thread1.start();
         thread2.start();
         System.out.println("thread1 : "+thread1.getState());
