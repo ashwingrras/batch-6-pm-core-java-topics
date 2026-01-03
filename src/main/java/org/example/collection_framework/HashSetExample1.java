@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-public class SetExample1
+public class HashSetExample1
 {
     public static void main(String[] args) {
         Set<String> rollNos = new HashSet<>();
@@ -45,5 +45,15 @@ public class SetExample1
         Object[] setToArray = rollNos.toArray();
         System.out.println(Arrays.toString(setToArray));
         System.out.println(setToArray[4]);
+
+        // Get an Iterator
+        Iterator<String> iterator = rollNos.iterator();
+
+        // Iterate through the HashSet
+        while (iterator.hasNext()) {
+            String rollNo = iterator.next();
+            System.out.println(rollNo);
+        }
+
     }
 }
